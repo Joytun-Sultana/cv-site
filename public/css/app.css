@@ -1,0 +1,214 @@
+body {
+    font-family: 'Inria Serif', serif !important;
+    background: linear-gradient(to right, #dce6f3,  #6688fb );
+    justify-content: center !important; 
+}
+
+
+ /* HOME PAGE DESIGN */
+#home-page{
+    margin-top: 20vh;
+    padding-left: 5vw;
+}
+#create-cv{
+    width: 120px;
+    margin-left: 5vw;
+    margin-top: 10px;
+    box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
+    transition: box-shadow 0.3s ease !important;
+}
+#home-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#home-left {
+    flex: 1;
+    padding:0;
+}
+
+#home-right{
+    display: flex;
+    gap: 10px;
+    height: 60vh;
+    width: 55vw;
+}
+.right-image {
+    width: 25vw;
+    height: 70vh; 
+    border: 1.5px solid #8d89ec;
+    border-radius: 8px; 
+    box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
+    transition: box-shadow 0.3s ease !important;
+}
+#img1{
+    margin-top: 0vh;
+}
+#img2{
+    margin-top: 10vh;
+}
+
+ /* NAV BAR HOME BUTTON */
+.navbar-brand{
+    color: #0211b3 !important; 
+    font-size: 20px !important; 
+    padding-left: 2vw;
+    
+    
+}
+
+.nav-home{
+    box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
+    background: linear-gradient(to top, #ffffff,  #c4c4e2 );
+}
+
+
+/* BUTTON DESIGN */
+.btn-primary {
+    background: linear-gradient(to right, #3087f9,  #64a6fd );
+
+    /* background-color: #4e91fc !important;  */
+    color: rgb(243, 241, 241);
+    border-radius: 10% !important;
+    width: 75px;
+    margin-top: 50px;
+    box-shadow: 0 6px 10px rgba(54, 3, 173, 0.5);
+    transition: box-shadow 0.5s ease;
+}
+.btn-secondary{
+    background: linear-gradient(to right, #3087f9,  #64a6fd );
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease;
+}
+
+.add{
+    width: 100px;
+    margin-right: 1vw;
+}
+
+
+/* DESIGNING DOWNLOAD CV BUTTON */
+#download-div{
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+.download{
+    width: 150px;
+}
+
+
+#info-nav{
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
+    transition: box-shadow 0.3s ease !important;
+    background: linear-gradient(to top, #ffffff,  #d8d8e7   );
+}
+
+#home-nav{
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
+    transition: box-shadow 0.3s ease !important;
+    background: linear-gradient(to top, #ffffff,  #d8d8e7  );
+}
+
+ /* SIDE BAR */
+
+ .sidebar ul li.active a {
+    font-weight: bold;
+    color: white !important;
+}
+#left-side{
+    background-color: #70a7fa !important;
+    min-height: 100vh;
+    padding-top: 25px;
+}
+#left-nav{
+    background-color: #70a7fa !important;
+    /* height:100vh; */
+    min-height: 100vh;
+    padding-top: 25px;
+}
+
+
+#side a{
+    color: #e7dfff;
+    font-size: 22px;
+    text-shadow: 2px 2px 4px rgba(26, 2, 105, 0.8);
+
+}
+
+/* RIGHT SIDE BODY PART DESIGN */
+
+.caption{
+    margin-left: 5vw;
+    margin-bottom: 4vh;
+    font-size: bold !important;
+}
+#body-content, #home-page{
+    margin-top: 30px;
+    text-shadow: 2px 2px 4px rgba(241, 244, 253, 0.8);
+    color: #030008;
+   
+}
+
+/* FORM DESIGN */
+form {
+    width: 65%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    
+}
+
+.form-group input, .form-group textarea {
+    background: linear-gradient(to top, #ffffff,  #d8d8e7 );
+    width: 80%;
+    padding: 7px;
+    font-size: 15px;
+    border: 1.4px solid #6567f7;
+    border-radius: 4px;
+    box-shadow: 0 6px 10px rgba(90, 60, 196, 0.2);
+    transition: box-shadow 0.5s ease;
+}
+
+
+/* COLLER CHOSE DESIGN */
+
+
+.choose-color{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5vh;
+
+}
+.choose-color a{
+    margin-top: 2vh;
+}
+.choose-color h1{
+    margin-top: 1vh;
+}
+
+.color-circle {
+    cursor: pointer;
+    
+
+}
+.color-circle div{
+    box-shadow: 0 6px 10px rgba(52, 18, 164, 0.5);
+    transition: box-shadow 0.2s ease;
+}
+
+
