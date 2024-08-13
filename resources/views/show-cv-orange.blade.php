@@ -208,7 +208,8 @@
                         <h2>Projects</h2>
                         @foreach ($projects as $project)
                             <p><b>{{ $project->project_name }}</b></p>
-                            <p> {{ $project->description }} - <a href="{{ $project->github_link }}">{{ $project->github_link }}</a></p>
+                            <p> {{ $project->description }}</p>
+                            <p><b>Github link:</b> <a href="{{ $project->github_link }}">{{ $project->github_link }}</a></p>
                         @endforeach
                     </div>
                 </div>
