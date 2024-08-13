@@ -52,7 +52,7 @@
             padding-top: 20px;
             display: flex;
             justify-content: space-between;
-            background-color: rgb(152, 150, 150);
+            background-color: rgb(222, 220, 220);
         }
         .cv-left{
             background: linear-gradient(to right, #b1b2b3,  #ededef );

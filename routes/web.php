@@ -81,6 +81,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/show-cv-black', [PdfController::class, 'showCvBlack'])->name('show-cv-black');
     Route::get('/download-cv-pdf-black', [PdfController::class, 'downloadCvPdfBlack'])->name('download-cv-pdf-black');
 
+    Route::get('/show-cv-green', [PdfController::class, 'showCvGreen'])->name('show-cv-green');
+    Route::get('/download-cv-pdf-green', [PdfController::class, 'downloadCvPdfGreen'])->name('download-cv-pdf-green');
+
 });
 
 

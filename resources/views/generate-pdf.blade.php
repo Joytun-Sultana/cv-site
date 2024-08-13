@@ -47,10 +47,10 @@
         }
 
         .cv-body {
-            padding-top: 20px;
+            padding-top: 25px;
             display: flex;
             justify-content: space-between;
-            background-color: #bdd7f3;
+            background-color: #bdd7f3; /*that extra line under head section */
         }
         .cv-left{
             background: linear-gradient(to right, #b1b2b3,  #ededef );

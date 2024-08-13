@@ -21,8 +21,8 @@
         .cv-header {
             text-align: center;
             vertical-align: middle;
-            background-color: rgb(245, 90, 240); 
-            color: rgb(74, 2, 71);
+            background-color: rgb(108, 204, 60);
+            color: rgb(10, 99, 1);
             height: 200px;
             margin: 0;
             padding: 0;
@@ -47,10 +47,10 @@
         }
 
         .cv-body {
-            padding-top: 25px;
+            padding-top: 20px;
             display: flex;
             justify-content: space-between;
-            background-color: #fda1f1;
+            background-color:rgb(164, 233, 118);
         }
         .cv-left{
             background: linear-gradient(to right, #b1b2b3,  #ededef );
@@ -62,13 +62,13 @@
         }
 
         .cv-section b{
-            color: rgb(74, 2, 71);
+            color: rgb(7, 65, 1);
 
         }
         .cv-section h2 {
             font-size: 1.8em;
-            color: rgb(74, 2, 71);
-            border-bottom: 2px solid rgb(74, 2, 71);
+            color: rgb(10, 99, 1);
+            border-bottom: 2px solid rgb(10, 99, 1);
             padding-bottom: 5px;
             margin-bottom: 10px; 
             width: 250px;
@@ -85,7 +85,6 @@
         .page-break {
             page-break-before: always;
         }
-
     </style>
 
     {{-- <link rel="stylesheet" href="{{ asset('css/cv-style.css') }}"> --}}

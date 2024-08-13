@@ -246,6 +246,59 @@ class PdfController extends Controller
         return $pdf->download('generate-pdf-black.pdf');
     }
 
+
+
+    public function showCvGreen()
+    {
+        $user = Auth::user();
+
+        $personalDetails = $user->personalDetail;
+        $strengths = $user->strengths;
+        $educations = $user->educations;
+        $skills = $user->skills;
+        $projects = $user->projects;
+        $experiences = $user->experiences;
+
+
+        $data = [
+            'personalDetails' => $personalDetails,
+            'strengths' => $strengths,
+            'educations' => $educations,
+            'skills' => $skills,
+            'projects' => $projects,
+            'experiences' => $experiences,
+        ];
+
+     
+        return view('show-cv-green', $data);
+    }
+
+
+    public function downloadCvPdfGreen(){
+
+        $user = Auth::user();
+
+        $personalDetails = $user->personalDetail;
+        $strengths = $user->strengths;
+        $educations = $user->educations;
+        $skills = $user->skills;
+        $projects = $user->projects;
+        $experiences = $user->experiences;
+
+        $data = [
+            'personalDetails' => $personalDetails,
+            'strengths' => $strengths,
+            'educations' => $educations,
+            'skills' => $skills,
+            'projects' => $projects,
+            'experiences' => $experiences,
+        ];
+
+        $pdf = Pdf::loadView('generate-pdf-green', $data)
+              ->setPaper([0, 0, 612, 792], 'portrait');  // Custom paper size and orientation
+
+        return $pdf->download('generate-pdf-green.pdf');
+    }
 }
 
 
