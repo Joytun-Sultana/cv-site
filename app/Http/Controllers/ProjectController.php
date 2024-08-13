@@ -28,23 +28,24 @@ class ProjectController extends Controller
 
     public function saveProject(Request $request)
     {
-        $request->validate([
-            'project_name' => 'required|array',
-            'description' => 'required|array',
-            'github_link' => 'required|array',
+        $validatedData=$request->validate([
+            'project_name' => 'nullable|array',
+            'description' => 'nullable|array',
+            'github_link' => 'nullable|array',
         ]);
 
         $user = Auth::user();
         $user->projects()->delete(); // Clear previous projects
 
-
         
         foreach ($request->project_name as $key => $value) {
+            if (!empty($value) || !empty($request->description[$key]) || !empty($request->github_link[$key])) {
             $user->projects()->create([
-                'project_name' => $value,
-                'description' => $request->description[$key],
-                'github_link' => $request->github_link[$key],
+                'project_name' => $value ?? '',
+                'description' => $request->description[$key] ?? '',
+                'github_link' => $request->github_link[$key] ?? '',
             ]);
+        }
         }
 
         return redirect()->route('show-cv');

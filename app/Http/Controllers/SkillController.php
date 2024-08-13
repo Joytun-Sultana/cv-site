@@ -29,15 +29,17 @@ class SkillController extends Controller
     public function saveSkills(Request $request)
     {
         $request->validate([
-            'skills' => 'required|array',
-            'skills.*' => 'required|string|max:255',
+            'skills' => 'nullable|array',
+            'skills.*' => 'nullable|string|max:255',
         ]);
 
         $user = Auth::user();
         $user->skills()->delete(); // Clear previous skills
 
         foreach ($request->skills as $skill) {
+            if (!empty($skill)) {
             $user->skills()->create(['skill' => $skill]);
+            }
         }
 
         return redirect()->route('fill-education');

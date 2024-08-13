@@ -14,13 +14,13 @@
                 @endphp
                 <div class="form-group">
                     <label for="skills[]">Skill:</label>
-                    <input type="text" name="skills[]" class="form-control" value="{{ $skill->skill }}" required>
+                    <input type="text" name="skills[]" class="form-control" value="{{ $skill->skill }}" >
                 </div>
             @endforeach
             @if( $flag==0)
                 <div class="form-group">
                     <label for="skills[]">Skill:</label>
-                    <input type="text" name="skills[]" class="form-control" required>
+                    <input type="text" name="skills[]" class="form-control" placeholder="Enter your skill">
                 </div>
             @endif
         </div>
@@ -38,7 +38,7 @@
                 newSkill.classList.add('form-group');
                 newSkill.innerHTML = `
                     <label for="skills[]">Skill:</label>
-                    <input type="text" name="skills[]" class="form-control" required>
+                    <input type="text" name="skills[]" class="form-control" placeholder="Enter your skill">
                 `;
                 container.appendChild(newSkill);
             });

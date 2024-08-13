@@ -32,22 +32,24 @@ class EducationController extends Controller
     public function saveEducation(Request $request)
     {
         $request->validate([
-            'institution_name' => 'required|array',
-            'field_of_study' => 'required|array',
-            'degree' => 'required|array',
-            'graduation_date' => 'required|array',
+            'institution_name' => 'nullable|array',
+            'field_of_study' => 'nullable|array',
+            'degree' => 'nullable|array',
+            'graduation_date' => 'nullable|array',
         ]);
 
         $user = Auth::user();
         $user->educations()->delete(); // Clear previous educations
 
         foreach ($request->institution_name as $key => $value) {
+            if (!empty($value) || !empty($request->field_of_study[$key]) || !empty($request->degree[$key]) || !empty($request->graduation_date[$key])) {
             $user->educations()->create([
-                'institution_name' => $value,
-                'field_of_study' => $request->field_of_study[$key],
-                'degree' => $request->degree[$key],
-                'graduation_date' => $request->graduation_date[$key],
+                'institution_name' => $value ?? '',
+                'field_of_study' => $request->field_of_study[$key] ?? '',
+                'degree' => $request->degree[$key] ?? '',
+                'graduation_date' => $request->graduation_date[$key] ?? '',
             ]);
+        }
         }
 
         return redirect()->route('fill-experience');

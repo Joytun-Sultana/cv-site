@@ -16,15 +16,15 @@
                 @endphp
                 <div class="form-group">
                     <label for="company_name">Company Name:</label>
-                    <input type="text" name="company_name[]" class="form-control" value="{{ $experience->company_name }}" required>
+                    <input type="text" name="company_name[]" class="form-control" value="{{ $experience->company_name }}" placeholder="Enter compant name">
                 </div>
                 <div class="form-group">
                     <label for="position">Position:</label>
-                    <input type="text" name="position[]" class="form-control" value="{{ $experience->position }}" required>
+                    <input type="text" name="position[]" class="form-control" value="{{ $experience->position }}" placeholder="Enter position">
                 </div>
                 <div class="form-group">
                     <label for="years_of_service">Years of Service:</label>
-                    <input type="text" name="years_of_service[]" class="form-control" value="{{ $experience->years_of_service }}" required>
+                    <input type="text" name="years_of_service[]" class="form-control" value="{{ $experience->years_of_service }}" placeholder="Enter years of service">
                 </div>
             @endforeach
 
@@ -32,15 +32,15 @@
             @if( $flag==0)
                 <div class="form-group">
                     <label for="company_name">Company Name:</label>
-                    <input type="text" name="company_name[]" class="form-control" required>
+                    <input type="text" name="company_name[]" class="form-control"  placeholder="Enter compant name">
                 </div>
                 <div class="form-group">
                     <label for="position">Position:</label>
-                    <input type="text" name="position[]" class="form-control" required>
+                    <input type="text" name="position[]" class="form-control" placeholder="Enter position">
                 </div>
                 <div class="form-group">
                     <label for="years_of_service">Years of Service:</label>
-                    <input type="text" name="years_of_service[]" class="form-control" required>
+                    <input type="text" name="years_of_service[]" class="form-control" placeholder="Enter years of service">
                 </div>
             @endif
         </div>
@@ -58,11 +58,11 @@
                 newExperience.classList.add('form-group');
                 newExperience.innerHTML = `
                     <label for="company_name">Company Name:</label>
-                    <input type="text" name="company_name[]" class="form-control" required>
+                    <input type="text" name="company_name[]" class="form-control" placeholder="Enter compant name">
                     <label for="position">Position:</label>
-                    <input type="text" name="position[]" class="form-control" required>
+                    <input type="text" name="position[]" class="form-control" placeholder="Enter position">
                     <label for="years_of_service">Years of Service:</label>
-                    <input type="text" name="years_of_service[]" class="form-control" required>
+                    <input type="text" name="years_of_service[]" class="form-control" placeholder="Enter years of service">
                 `;
                 container.appendChild(newExperience);
             });

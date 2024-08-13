@@ -29,15 +29,17 @@ class StrengthController extends Controller
     public function saveStrengths(Request $request)
     {
         $request->validate([
-            'strengths' => 'required|array',
-            'strengths.*' => 'required|string|max:255',
+            'strengths' => 'nullable|array',
+            'strengths.*' => 'nullable|string|max:255',
         ]);
 
         $user = Auth::user();
         $user->strengths()->delete(); // Clear previous strengths
 
         foreach ($request->strengths as $strength) {
+            if (!empty($strength)) {
             $user->strengths()->create(['strength' => $strength]);
+            }
         }
 
         return redirect()->route('fill-skills');

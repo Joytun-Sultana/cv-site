@@ -210,5 +210,13 @@ form {
     box-shadow: 0 6px 10px rgba(52, 18, 164, 0.5);
     transition: box-shadow 0.2s ease;
 }
+input::placeholder {
+    color: #aeabab  !important; /* Change this to your desired color */
+    opacity: 1; /* Set the opacity if needed (1 is fully opaque) */
+}
 
+.form-control::placeholder {
+    color: #aeabab   !important;;
+    opacity: 1; 
+}
 

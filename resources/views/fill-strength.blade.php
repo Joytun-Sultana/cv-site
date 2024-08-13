@@ -14,13 +14,13 @@
                 @endphp
                 <div class="form-group">
                     <label for="strengths[]">Strength:</label>
-                    <input type="text" name="strengths[]" class="form-control" value="{{ $strength->strength }}" required>
+                    <input type="text" name="strengths[]" class="form-control" value="{{ $strength->strength }}">
                 </div>
             @endforeach
             @if( $flag==0)
                 <div class="form-group">
                     <label for="strengths[]">Strengths:</label>
-                    <input type="text" name="strengths[]" class="form-control" required>
+                    <input type="text" name="strengths[]" class="form-control" placeholder="Enter your strength">
                 </div>
             @endif
         </div>
@@ -38,7 +38,7 @@
                 newStrength.classList.add('form-group');
                 newStrength.innerHTML = `
                     <label for="strengths[]">Strength:</label>
-                    <input type="text" name="strengths[]" class="form-control" required>
+                    <input type="text" name="strengths[]" class="form-control" placeholder="Enter your strength">
                 `;
                 container.appendChild(newStrength);
             });

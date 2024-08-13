@@ -29,20 +29,22 @@ class ExperienceController extends Controller
     public function saveExperience(Request $request)
     {
         $request->validate([
-            'company_name' => 'required|array',
-            'position' => 'required|array',
-            'years_of_service' => 'required|array',
+            'company_name' => 'nullable|array',
+            'position' => 'nullable|array',
+            'years_of_service' => 'nullable|array',
         ]);
 
         $user = Auth::user();
         $user->experiences()->delete(); // Clear previous experiences
 
         foreach ($request->company_name as $key => $value) {
+            if (!empty($value) || !empty($request->position[$key]) || !empty($request->years_of_service[$key])) {
             $user->experiences()->create([
-                'company_name' => $value,
-                'position' => $request->position[$key],
-                'years_of_service' => $request->years_of_service[$key],
+                'company_name' => $value ?? '',
+                'position' => $request->position[$key] ?? '',
+                'years_of_service' => $request->years_of_service[$key] ?? '',
             ]);
+        }
         }
 
         return redirect()->route('fill-project');

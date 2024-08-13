@@ -16,11 +16,11 @@
 
                 <div class="form-group">
                     <label for="project_name">Project Name:</label>
-                    <input type="text" name="project_name[]" class="form-control" value="{{ $project->project_name }}" required>
+                    <input type="text" name="project_name[]" class="form-control" value="{{ $project->project_name }}" >
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <textarea name="description[]" class="form-control" required>{{ $project->description }}</textarea>
+                    <textarea name="description[]" class="form-control" >{{ $project->description }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="github_link">GitHub Link:</label>
@@ -35,11 +35,11 @@
             @if( $flag==0)
                 <div class="form-group">
                     <label for="project_name">Project Name:</label>
-                    <input type="text" name="project_name[]" class="form-control" required>
+                    <input type="text" name="project_name[]" class="form-control" placeholder="Enter project name">
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <textarea name="description[]" class="form-control" required></textarea>
+                    <textarea name="description[]" class="form-control" placeholder="Enter details"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="github_link">GitHub Link:</label>
@@ -61,9 +61,9 @@
                 newProject.classList.add('form-group');
                 newProject.innerHTML = `
                     <label for="project_name">Project Name:</label>
-                    <input type="text" name="project_name[]" class="form-control" required>
+                    <input type="text" name="project_name[]" class="form-control" placeholder="Enter project name>
                     <label for="description">Description:</label>
-                    <textarea name="description[]" class="form-control" required></textarea>
+                    <textarea name="description[]" class="form-control" placeholder="Enter details"></textarea>
                     <label for="github_link">GitHub Link:</label>
                     <input type="url" name="github_link[]" class="form-control">
                 `;
