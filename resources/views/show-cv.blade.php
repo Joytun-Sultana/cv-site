@@ -130,8 +130,8 @@
         </style>
     </head>
 
-    <body>
-        @include('cv-body')
+    <body >
+        @include('cv-body-default')
     </body>
     </html>
     <div id="download-div">
