@@ -1,10 +1,11 @@
 @extends('layouts.information')
 
 
+
 @section('content')
     <h1 class="caption">Personal Details</h1>
     
-    <form action="{{ url('/save-personal-details') }}" method="POST" id="personal">
+    <form action="{{ url('/save-personal-details') }}" method="POST" id="personal" enctype="multipart/form-data">
         @csrf
         <div class="form-group form-row-person">
             <label for="first_name">First Name:</label>
@@ -34,6 +35,11 @@
             <label for="address">Address:</label>
             <input type="text" name="address" class="form-control" value="{{ $personalDetails->address ?? '' }}" required>
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <div class="form-group">
+            <label for="image">Upload Image</label>
+            <input type="file" name="image" id="image" class="form-control"  value="{{ $personalDetails->image ?? '' }}">
+        </div>
+
+        <button type="submit" class="btn btn-primary" accept="image/*">Save</button>
     </form>
 @endsection

@@ -21,6 +21,10 @@ class SkillController extends Controller
     
     public function fillSkills()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
         $user = Auth::user();
         $skills = $user->skills;
         return view('fill-skills', compact('skills'));

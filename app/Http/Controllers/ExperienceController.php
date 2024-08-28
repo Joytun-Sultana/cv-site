@@ -21,6 +21,10 @@ class ExperienceController extends Controller
     
     public function fillExperience()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
          $user = Auth::user();
          $experiences = $user->experiences;
          return view('fill-experience', compact('experiences'));

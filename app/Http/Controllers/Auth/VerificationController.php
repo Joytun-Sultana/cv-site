@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\VerifiesEmails;
+use Illuminate\Support\Str;
+use App\Models\User;
 
 class VerificationController extends Controller
 {
@@ -25,6 +28,7 @@ class VerificationController extends Controller
      *
      * @var string
      */
+    
     protected $redirectTo = '/home';
 
     /**
@@ -32,10 +36,32 @@ class VerificationController extends Controller
      *
      * @return void
      */
+    
     public function __construct()
     {
         $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
+
+    public function confirmEmail(Request $request)
+    {
+        $token = $request->query('token');
+
+        // Find the user by token
+        $user = User::where('email_verification_token', $token)->first();
+
+        if ($user) {
+            // Mark the email as verified
+            $user->email_verified_at = now();
+            $user->email_verification_token = null; // Remove the token
+            $user->save();
+
+            return redirect('/home')->with('status', 'Email verified!');
+        } 
+        else {
+            return redirect('/')->with('error', 'Invalid token.');
+        }
+    }
+
 }

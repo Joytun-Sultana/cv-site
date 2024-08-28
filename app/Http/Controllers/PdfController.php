@@ -21,6 +21,10 @@ class PdfController extends Controller
     
     public function showCv()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
         $user = Auth::user();
 
         $personalDetails = $user->personalDetail;
@@ -78,6 +82,10 @@ class PdfController extends Controller
 
     public function showCvPurple()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
         $user = Auth::user();
 
         $personalDetails = $user->personalDetail;
@@ -135,6 +143,10 @@ class PdfController extends Controller
 
     public function showCvOrange()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
         $user = Auth::user();
 
         $personalDetails = $user->personalDetail;
@@ -193,6 +205,10 @@ class PdfController extends Controller
 
     public function showCvBlack()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
         $user = Auth::user();
 
         $personalDetails = $user->personalDetail;
@@ -250,6 +266,10 @@ class PdfController extends Controller
 
     public function showCvGreen()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
         $user = Auth::user();
 
         $personalDetails = $user->personalDetail;

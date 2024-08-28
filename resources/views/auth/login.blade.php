@@ -64,6 +64,13 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4 mt-2">
+                                <a href="{{ route('auth.google')}}">
+                                    <img src="https://raw.githubusercontent.com/TutorialsAndroid/GButton/master/images/GoogleSignUpDark.png" alt="google logo" style="width: 250px">
+                                </a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -20,6 +20,7 @@ class PersonalDetail extends Model
         'github',
         'linkedin',
         'address',
+        'image'
     ];
 
     public function user()

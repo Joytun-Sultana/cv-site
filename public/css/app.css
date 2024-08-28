@@ -24,6 +24,29 @@ body {
     align-items: center;
     padding: 20px;
 }
+#email-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+
+}
+#email-div h1 {
+    padding-top: 5vh;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(95, 76, 157, 0.8);
+    font-size: 45px;
+    margin: 0; /* Remove default margin */
+    color: #282aa1;
+}
+#email-div #mail-icon {
+    padding-left: 25vw;
+}
+#email-div #resend {
+    padding-left: 50vw;
+    
+}
 #home-left {
     flex: 1;
     padding:0;
@@ -31,12 +54,12 @@ body {
 
 #home-right{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     height: 60vh;
     width: 55vw;
 }
 .image {
-    width: 25vw;
+    width: 24vw;
     height: 70vh; 
     border: 1.5px solid #8d89ec;
     border-radius: 8px; 
@@ -140,9 +163,14 @@ body {
 }
 
 
-
-
-
+.verify{
+    color: #565454 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    font-size: 45px;
+}
 
 
 
@@ -257,7 +285,7 @@ body {
 }
 #body-content, #home-page{
     margin-top: 30px;
-    text-shadow: 2px 2px 4px rgba(241, 244, 253, 0.8);
+    text-shadow: 2px 2px 4px rgba(116, 115, 115, 0.6);
     color: #030008;
    
 }

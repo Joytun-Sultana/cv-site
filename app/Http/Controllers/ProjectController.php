@@ -21,6 +21,10 @@ class ProjectController extends Controller
     
     public function fillProject()
     {
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
         $user = Auth::user();
         $projects = $user->projects;
         return view('fill-project', compact('projects'));
