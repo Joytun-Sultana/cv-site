@@ -131,7 +131,33 @@
     </head>
 
     <body >
+        <?php
+        if (Auth::check() && Auth::user()->email_verification_token !== null) {
+            // If not verified, redirect to the 'confirm' page
+            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
+        }
+        $user = Auth::user();
+
+        $personalDetails = $user->personalDetail;
+        $strengths = $user->strengths;
+        $educations = $user->educations;
+        $skills = $user->skills;
+        $projects = $user->projects;
+        $experiences = $user->experiences;
+
+
+        $data = [
+            'personalDetails' => $personalDetails,
+            'strengths' => $strengths,
+            'educations' => $educations,
+            'skills' => $skills,
+            'projects' => $projects,
+            'experiences' => $experiences,
+        ];
+        ?>
+
         @include('cv-body-default')
+
     </body>
     </html>
     <div id="download-div">

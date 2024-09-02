@@ -1,6 +1,6 @@
 body {
     font-family: 'Inria Serif', serif !important;
-    background: linear-gradient(to right, #dce6f3,  #6688fb );
+    background: linear-gradient(to right, #fdfdfd,  #6688fb );
     justify-content: center !important; 
 }
 
@@ -50,6 +50,7 @@ body {
 #home-left {
     flex: 1;
     padding:0;
+    
 }
 
 #home-right{
@@ -63,7 +64,7 @@ body {
     height: 70vh; 
     border: 1.5px solid #8d89ec;
     border-radius: 8px; 
-    box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
+    box-shadow: 0 12px 12px rgba(46, 4, 130, 0.7) !important;
     transition: box-shadow 0.3s ease !important;
 }
 #img1{
@@ -201,10 +202,10 @@ body {
 
 /* BUTTON DESIGN */
 .btn-primary {
-    background: linear-gradient(to right, #3087f9,  #64a6fd );
+    background: linear-gradient(to right, #dce9f9,  #fafbfc );
 
     /* background-color: #4e91fc !important;  */
-    color: rgb(243, 241, 241);
+    color: rgb(26, 7, 88) !important;
     border-radius: 10% !important;
     width: 75px;
     margin-top: 50px;
@@ -237,14 +238,14 @@ body {
 
 
 #info-nav{
-    background-color: rgb(255, 255, 255) !important;
+    background: linear-gradient(to bottom, #ecf2fd,  #fefeff ) !important;
     box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
     transition: box-shadow 0.3s ease !important;
     background: linear-gradient(to top, #ffffff,  #d8d8e7   );
 }
 
 #home-nav{
-    background-color: rgb(255, 255, 255) !important;
+    background: linear-gradient(to bottom, #cddbf8,  #f1f1f4 ) !important;
     box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
     transition: box-shadow 0.3s ease !important;
     background: linear-gradient(to top, #ffffff,  #d8d8e7  );
@@ -253,69 +254,73 @@ body {
  /* SIDE BAR */
 
  .sidebar ul li.active a {
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white !important;
 }
 #left-side{
-    background-color: #70a7fa !important;
+    background-color: #dbddfa !important;
     min-height: 100vh;
-    padding-top: 25px;
+    padding-top: 3vh;
 }
 #left-nav{
-    background-color: #70a7fa !important;
+    background-color: #ffffff !important;
     /* height:100vh; */
     min-height: 100vh;
-    padding-top: 25px;
+    padding-top: 3vh;
 }
+
 
 
 #side a{
-    color: #e7dfff;
-    font-size: 22px;
-    text-shadow: 2px 2px 4px rgba(26, 2, 105, 0.8);
+    color: #0e0e0f;
+    font-size: 14px;
+    text-shadow: 2px 2px 4px rgba(26, 2, 105, 0.2);
 
 }
 
 /* RIGHT SIDE BODY PART DESIGN */
 
 .caption{
-    margin-left: 5vw;
-    margin-bottom: 4vh;
+    text-align: center !important;
+    margin-bottom: 5vh;
     font-size: bold !important;
+    color: #0211b3 !important; 
 }
-#body-content, #home-page{
-    margin-top: 30px;
+
+#body-content{
+    margin-top: 1vh;
     text-shadow: 2px 2px 4px rgba(116, 115, 115, 0.6);
-    color: #030008;
-   
+    color: #0211b3 !important; 
 }
 
 /* FORM DESIGN */
 form {
-    width: 65%;
-    max-width: 600px;
+    justify-content: center !important;
+    width: 30vw;
+    max-width: 30vw;
     margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-bottom: 21px;
+    color: #0211b3 !important; 
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
-    
 }
 
 .form-group input, .form-group textarea {
-    background: linear-gradient(to top, #ffffff,  #d8d8e7 );
-    width: 80%;
-    padding: 7px;
+    background: linear-gradient(to bottom, #ffffff,  #eeeefa ) !important;
+    width: 100%;
+    padding: 6px;
     font-size: 15px;
-    border: 1.4px solid #6567f7;
-    border-radius: 4px;
-    box-shadow: 0 6px 10px rgba(90, 60, 196, 0.2);
+    border: 1.4px solid #8b8eec;
+    border-radius: 2px;
+    box-shadow: 0 10px 10px rgba(64, 58, 154, 0.3);
     transition: box-shadow 0.4s ease;
 }
 
@@ -331,7 +336,7 @@ form {
     animation-delay: 0s;
 }
 .caption{
-    position: relative;
+    text-align: center;
     opacity: 0;
     animation: slideInFromBack .3s ease-out forwards;
     animation-delay: 0s;
@@ -343,19 +348,6 @@ form {
     animation: slideInFromRight 1s ease-out forwards;
     animation-delay: 0s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -380,7 +372,7 @@ form {
     margin-top: 2vh;
 }
 .choose-color h1{
-    margin-top: 1vh;
+    margin-top: 5vh;
 }
 
 .color-circle {
@@ -401,4 +393,84 @@ input::placeholder {
     color: #aeabab   !important;;
     opacity: 1; 
 }
+
+
+
+.profile{
+    padding-left: 7vw !important;
+    
+}
+
+
+#side {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Ensure wrapping of elements */
+    padding: 0 !important; /* Remove padding */
+    margin: 0 !important; /* Remove margin */
+}
+
+.nav-item {
+    width: 7vw;
+    height:auto ;
+
+    /* width: 50% !important;  */
+    padding: 0 !important; 
+    margin: 0 !important; 
+}
+
+.outer-square-box {
+    height: 7vw !important; 
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /* border: 0.5px solid #ccc  !important; Add a border */
+    text-align: center !important;
+    box-sizing: border-box !important; /* Include padding and border in width/height */
+}
+.square-box {
+    height: 7vw  !important; /* Set the height of each box */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: 0.1px solid #e9eaeb !important; /* Add a border */
+    text-align: center !important;
+    flex-direction: column;
+    /* box-sizing: border-box !important; Include padding and border in width/height */
+}
+
+.square-box p {
+    margin: 0 !important;
+    padding: 2px !important;
+}
+.square-box div {
+    margin: 0;
+    padding: 2px;
+}
+
+
+.nav-item.active .square-box {
+    border: 0.1px solid #0754a1 !important;
+    background-color: #f0f1f6 !important; /* Active background color */
+    color: rgb(100, 97, 97) !important; /* Active text color */
+}
+
+.nav-link {
+    padding: 0 !important; /* Remove padding from the link */
+    margin: 0 !important; /* Remove margin */
+    display: block !important; /* Ensure the link covers the entire box */
+}
+.col-custom {
+    flex: 0 0 20.8333% !important; /* 2.5/12 = 0.208333 or 20.8333% */
+    max-width: 20.8333% !important;
+  }
+
+  .card-class{
+    justify-content: center;
+    margin-top: 3vh !important;
+    background-color: #ffffff !important;
+  }
+  .form-design{
+    padding-left:5.5vw !important;
+
+  }
 

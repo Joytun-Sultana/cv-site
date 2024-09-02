@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Cv;
 
-
+ini_set('max_execution_time', 300); // 300 seconds = 5 minutes
 
 
 
@@ -39,16 +39,6 @@ class CvController extends Controller
 
         return redirect()->route('profile')->with('success', 'CV created successfully.');
     }
-    // public function showCvWithImage()
-    // {
-    //     $user = Auth::user();
-    //     $cv = $user->cv; // Assuming a one-to-one relationship between User and Cv
-
-    //     if (!$cv) {
-    //         return redirect()->back()->with('error', 'You have not created any CVs yet.');
-    //     }
-
-    //     return view('cv-view', compact('cv', 'user'));
     // }
     public function showCvWithImage()
     {

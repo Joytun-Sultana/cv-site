@@ -27,6 +27,7 @@ class PersonalController extends Controller
         }
         $user = Auth::user();
         $personalDetails = $user->personalDetail;
+        
         return view('fill-personal-details', compact('personalDetails'));
     }
     

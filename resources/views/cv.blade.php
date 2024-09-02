@@ -1,9 +1,3 @@
-@extends('layouts.information')
-
-
-
-@section('content')
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -42,8 +36,8 @@
             .cv-header {
                
                 text-align: center;
-                background-color: rgb(245, 90, 240); 
-                color: rgb(74, 2, 71);
+                background-color: #8cbefc; 
+                color: #0211b3;
                 height: 180px;
                 box-shadow: 0px 4px 6px rgba(66, 66, 67, 0.4);
                 margin-bottom: 20px;
@@ -76,13 +70,14 @@
             }
 
             .cv-section b{
-                color: rgb(74, 2, 71);
+                color: #030d69
+
             }
 
             .cv-section h2 {
                 font-size: 1.8em;
-                color: rgb(74, 2, 71);
-                border-bottom: 2px solid rgb(74, 2, 71);
+                color: #0211b3;
+                border-bottom: 2px solid #0211b3;
                 padding-bottom: 5px;
                 margin-bottom: 10px; 
                 width: 250px;
@@ -130,38 +125,10 @@
     </head>
 
     <body >
-        <?php
-        if (Auth::check() && Auth::user()->email_verification_token !== null) {
-            // If not verified, redirect to the 'confirm' page
-            return redirect('/verify-first')->with('error', 'Please verify your email before accessing this page.');
-        }
-        $user = Auth::user();
-
-        $personalDetails = $user->personalDetail;
-        $strengths = $user->strengths;
-        $educations = $user->educations;
-        $skills = $user->skills;
-        $projects = $user->projects;
-        $experiences = $user->experiences;
-
-
-        $data = [
-            'personalDetails' => $personalDetails,
-            'strengths' => $strengths,
-            'educations' => $educations,
-            'skills' => $skills,
-            'projects' => $projects,
-            'experiences' => $experiences,
-        ];
-        ?>
-
         @include('cv-body-default')
-
     </body>
     </html>
     <div id="download-div">
         <a href="{{ route('download-cv-pdf') }}" class="btn btn-primary mt-5 download">Download as PDF</a>
     </div>
-
-@endsection
 
