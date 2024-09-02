@@ -1,16 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.information')
 
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="profile-image">
+        <div class="profile-image profile">
             @if(Auth::user()->personalDetail && Auth::user()->personalDetail->image)
                 <img src="{{ asset('storage/' . Auth::user()->personalDetail->image) }}" alt="Profile Image" class="img-fluid" style="width: 200px; height:200px; border-radius: 50%;">
             @else
                 <p>No profile image uploaded.</p>
             @endif
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 profile">
             <h3><br>{{ $user->name }}</h3>
             <p>{{ $user->email }}</p>
         </div>

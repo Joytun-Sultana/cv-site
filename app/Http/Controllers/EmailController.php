@@ -15,8 +15,9 @@ class EmailController extends Controller
     public function sendEmail(){
         $user = Auth::user();
         $toEmail = Auth::user()->email;
-        $message = "Hello, welcome to our website";
-        $subject = "From CV-site";
+        $message = "Thank you for signing up <br>To complete your registration and start building your CV, please verify your email address by clicking the link below:";
+        $subject = "Please Verify Your Email Address for CV-Site";
+        $name = Auth::user()->name;
 
         $token = Str::random(60);
 
@@ -25,7 +26,7 @@ class EmailController extends Controller
          $user->save();
 
 
-        Mail::to($toEmail)->send(new welcomeemail($message,$subject, $token));
+        Mail::to($toEmail)->send(new welcomeemail($name,$subject, $token));
 
         return view('viewnew');
         
@@ -33,8 +34,9 @@ class EmailController extends Controller
     public function reSendEmail(){
         $user = Auth::user();
         $toEmail = Auth::user()->email;
-        $message = "Hello, welcome to our website";
-        $subject = "From CV-site";
+        //$message = "Thank you for signing up. To complete your registration and start building your CV, please verify your email address by clicking the link below:";
+        $subject = "Please Verify Your Email Address for CV-Site";
+        $name = Auth::user()->name;
 
         $token = Str::random(60);
 
@@ -43,7 +45,7 @@ class EmailController extends Controller
          $user->save();
 
 
-        Mail::to($toEmail)->send(new welcomeemail($message,$subject, $token));
+        Mail::to($toEmail)->send(new welcomeemail($name,$subject, $token));
 
         return view('new-resend');
         

@@ -24,6 +24,9 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <b>Home</b>
                 </a>
+                <a class="navbar-brand" href="{{ url('/profile') }}">
+                    <b>Profile</b>
+                </a>
                 {{-- <a class="navbar-brand" href="{{ url('/template') }}">
                     <b>Template</b>
                 </a> --}}

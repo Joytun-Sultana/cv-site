@@ -50,6 +50,7 @@ body {
 #home-left {
     flex: 1;
     padding:0;
+    
 }
 
 #home-right{
@@ -63,7 +64,7 @@ body {
     height: 70vh; 
     border: 1.5px solid #8d89ec;
     border-radius: 8px; 
-    box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
+    box-shadow: 0 12px 12px rgba(46, 4, 130, 0.7) !important;
     transition: box-shadow 0.3s ease !important;
 }
 #img1{
@@ -237,14 +238,14 @@ body {
 
 
 #info-nav{
-    background-color: rgb(255, 255, 255) !important;
+    background: linear-gradient(to bottom, #cddbf8,  #f1f1f4 ) !important;
     box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
     transition: box-shadow 0.3s ease !important;
     background: linear-gradient(to top, #ffffff,  #d8d8e7   );
 }
 
 #home-nav{
-    background-color: rgb(255, 255, 255) !important;
+    background: linear-gradient(to bottom, #cddbf8,  #f1f1f4 ) !important;
     box-shadow: 0 8px 12px rgba(46, 4, 130, 0.5) !important;
     transition: box-shadow 0.3s ease !important;
     background: linear-gradient(to top, #ffffff,  #d8d8e7  );
@@ -282,11 +283,13 @@ body {
     margin-left: 5vw;
     margin-bottom: 4vh;
     font-size: bold !important;
+    color: #0211b3 !important; 
 }
 #body-content, #home-page{
     margin-top: 30px;
     text-shadow: 2px 2px 4px rgba(116, 115, 115, 0.6);
     color: #030008;
+    color: #0211b3 !important; 
    
 }
 
@@ -298,7 +301,9 @@ form {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
+    color: #0211b3 !important; 
+
 }
 
 .form-group label {
@@ -309,13 +314,13 @@ form {
 }
 
 .form-group input, .form-group textarea {
-    background: linear-gradient(to top, #ffffff,  #d8d8e7 );
+    background: linear-gradient(to bottom, #cddbf8,  #f1f1f4 ) !important;
     width: 80%;
     padding: 7px;
     font-size: 15px;
-    border: 1.4px solid #6567f7;
+    border: 1.4px solid #8b8eec;
     border-radius: 4px;
-    box-shadow: 0 6px 10px rgba(90, 60, 196, 0.2);
+    box-shadow: 0 10px 10px rgba(64, 58, 154, 0.5);
     transition: box-shadow 0.4s ease;
 }
 
@@ -402,3 +407,9 @@ input::placeholder {
     opacity: 1; 
 }
 
+
+
+.profile{
+    padding-left: 7vw !important;
+    
+}

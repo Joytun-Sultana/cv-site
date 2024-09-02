@@ -9,7 +9,7 @@
             <a class="color-circle" href="/show-cv-black"><div style="height: 30px; width:30px; background-color:rgb(83, 82, 84); border-radius:50% "></div></a>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Template</h1>
             <a class="color-circle" href="/show-cv"><div style="height: 30px; width:30px; background-color:#bec3fa; border-radius:50% "></div></a>
-            <a class="color-circle" href="/cv-view"><div style="height: 30px; width:30px; background-color:#bec3fa; border-radius:50% "></div></a>
+            <a class="color-circle" href="/cv-view"><div style="height: 30px; width:30px; background-color:#8b8b8e; border-radius:50% "></div></a>
 
     </div>
 

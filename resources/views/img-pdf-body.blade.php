@@ -1,16 +1,20 @@
 <div class="cv-container">
     <div class="cv-header">
-        {{-- <div id="imageId">
-            @if($personalDetails->image)
-                <img src="{{ asset('storage/' . $personalDetails->image) }}" alt="Profile Image">
-            @endif
-        </div> --}}
-
         <div id="imageId">
+            @if($personalDetails->image)   
+                <p>Image found</p> 
+                {{-- <img src="{{ public_path("public/storage/profile_images/".$personalDetails->image) }}"> --}}
+                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/pp.png'))) }}">
+            @endif
+        </div>
+
+
+
+        {{-- <div id="imageId">
             @if($personalDetails->image)
                 <img src="{{ url('storage/' . $personalDetails->image) }}" alt="Profile Image" class="profile-image">
             @endif
-        </div>
+        </div> --}}
         <div id="nameId">
             <h1 class="cv-name">{{ $personalDetails->first_name ?? '' }} {{ $personalDetails->last_name ?? '' }}</h1>
         </div>

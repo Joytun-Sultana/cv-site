@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 class welcomeemail extends Mailable 
 {
     use Queueable, SerializesModels;
-    public $mailmessage;
+    public $name;
     public $subject;
     public $token;
     
@@ -20,9 +20,9 @@ class welcomeemail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct($message, $subject, $token)
+    public function __construct($name, $subject, $token)
     {
-        $this->mailmessage = $message;
+        $this->name = $name;
         $this->subject = $subject;
         $this->token = $token;
     }
