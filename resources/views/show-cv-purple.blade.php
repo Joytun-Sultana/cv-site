@@ -1,8 +1,8 @@
-@extends('layouts.information')
+@extends('layouts.information_show_cv')
 
 
 
-@section('content')
+@section('content1')
 
     <!DOCTYPE html>
     <html lang="en">
@@ -14,14 +14,14 @@
         <style>
             body {
                 font-family: 'Inria Serif', serif ;
-                line-height: 1.4;
+                line-height: 1.3;
                 color: black !important;
               
             }
 
             .cv-container {
                
-                width: 700px;
+                width: 730px;
                 height: 877px;
                 margin: 0 auto;
                 padding: 0px;
@@ -67,11 +67,11 @@
             }
 
             .cv-left {
-                width: 40%;
+                width: 47%;
                 padding-left: 50px;
             }
             .cv-right{
-                width: 45%;
+                width: 47%;
                 padding-right: 30px;
             }
 
@@ -123,6 +123,27 @@
             }
             .page-break {
                 page-break-before: always;
+            }
+            .choose-color {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #color, #template {
+                display: flex;
+                align-items: center;
+                gap: 6px; /* Space between the circles */
+                margin-bottom: 0px; /* Space between the rows */
+            }
+
+            #color h2, #template h2 {
+                margin-right: 10px; /* Space between the heading and the circles */
+                margin-bottom: 0;
+                margin-left: 10px;
+            }
+
+            .color-circle {
+                display: inline-block;
             }
 
 

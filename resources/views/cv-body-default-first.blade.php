@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="cv-container cv-default" style="margin-left:12vw;">
+    <div class="cv-container cv-default cv-default1" style="margin-left:12vw;">
         <!-- Name Section -->
         <div class="cv-header">
             <h1 class="cv-name">{{ $personalDetails->first_name ?? '' }} {{ $personalDetails->last_name ?? '' }}</h1>

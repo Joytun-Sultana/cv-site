@@ -89,7 +89,7 @@
 
             .cv-container {
                
-                width: 350px;
+                width: 375px;
                 height: 500px;
                 margin: 0 auto;
                 padding: 0px;
@@ -97,19 +97,13 @@
                 background-color: rgb(255, 255, 255);
                 display: flex;
                 flex-direction: column;
-                margin-left: 3vw;
+                margin-left: 4vw;
             }
 
             .cv-header {
                 display: flex;
                 justify-content: center; /* Center horizontally */
                 align-items: center; /* Center vertically */
-
-                
-            }
-
-            .cv-header {
-               
                 text-align: center;
                 background-color: #8cbefc; 
                 color: #0211b3;
@@ -133,11 +127,12 @@
                 padding-top: 10px;
                 display: flex;
                 justify-content: space-between;
-                background-color: #ffffff
+                background-color: #ffffff;
+                line-height: 1.3;
             }
 
             .cv-left {
-                width: 40%;
+                width: 45%;
                 padding-left: 25px;
             }
             .cv-right{
@@ -195,6 +190,7 @@
             .page-break {
                 page-break-before: always;
             }
+
             .choose-color {
                 display: flex;
                 flex-direction: column;
@@ -247,7 +243,7 @@
         ];
         ?>
 
-        @include('cv-body-default')
+        @include('cv-body-default-card')
 
     </body>
     </html>

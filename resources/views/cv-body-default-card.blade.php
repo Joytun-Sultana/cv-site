@@ -1,8 +1,8 @@
 <body >
-    <div class="choose-color" style="margin-left:11vw;">
+    <div class="choose-color" style="margin-left:3vw;">
         
         <div id="color">
-            <h2>Choose Color</h2>
+            <h2>Choose color</h2>
             <a class="color-circle" href="/show-cv"><div style="height: 22px; width:22px; background-color:#0211b3; border-radius:50% "></div></a>
             <a class="color-circle" href="/show-cv-purple"><div style="height: 22px; width:22px;  background-color:rgb(126, 12, 122); border-radius:50% "></div></a>
             <a class="color-circle" href="/show-cv-orange"><div style="height: 22px; width:22px;  background-color:rgb(184, 120, 2); border-radius:50% "></div></a>
@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="cv-container cv-default" style="margin-left:12vw;">
+    <div class="cv-container cv-default" >
         <!-- Name Section -->
         <div class="cv-header">
             <h1 class="cv-name">{{ $personalDetails->first_name ?? '' }} {{ $personalDetails->last_name ?? '' }}</h1>

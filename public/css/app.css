@@ -67,6 +67,15 @@ body {
     box-shadow: 0 12px 12px rgba(46, 4, 130, 0.7) !important;
     transition: box-shadow 0.3s ease !important;
 }
+/* .pro-image {
+    width: 24vw;
+    height: 70vh; 
+    border: 1.5px solid #8d89ec;
+    border-radius: 8px; 
+    box-shadow: 0 12px 12px rgba(46, 4, 130, 0.7) !important;
+    transition: box-shadow 0.3s ease !important;
+} */
+
 #img1{
     margin-top: 0vh;
 }
@@ -264,9 +273,17 @@ body {
 }
 #left-nav{
     background-color: #ffffff !important;
-    /* height:100vh; */
+    height:105vh;
     min-height: 100vh;
     padding-top: 3vh;
+  
+}
+#left-nav-cv{
+    background-color: #ffffff !important;
+    height:150vh;
+    min-height: 100vh;
+    padding-top: 3vh;
+  
 }
 
 
@@ -331,18 +348,24 @@ form {
 
 .form-group input, .form-group textarea, .form-group label{
     position: relative;
-    opacity: 0;
+    /* opacity: 0;
     animation: slideInFromBack 0.3s ease-out forwards;
-    animation-delay: 0s;
+    animation-delay: 0s; */
 }
 .caption{
     text-align: center;
-    opacity: 0;
+    /* opacity: 0;
     animation: slideInFromBack .3s ease-out forwards;
-    animation-delay: 0s;
+    animation-delay: 0s; */
 
 }
 .cv-default{
+    position: relative;
+    /* opacity: 0;
+    animation: slideInFromRight 1s ease-out forwards;
+    animation-delay: 0s; */
+}
+.cv-default1{
     position: relative;
     opacity: 0;
     animation: slideInFromRight 1s ease-out forwards;
@@ -368,11 +391,12 @@ form {
     margin-bottom: 5vh;
 
 }
-.choose-color a{
+.choose-color #color a{
     margin-top: 2vh;
 }
-.choose-color h1{
-    margin-top: 5vh;
+.choose-color #color h2{
+    margin-top: 1vh;
+    
 }
 
 .color-circle {
@@ -396,9 +420,19 @@ input::placeholder {
 
 
 
-.profile{
-    padding-left: 7vw !important;
+.profile img{
+
+    border: 1.5px solid #8d89ec;
+    border-radius: 10px; 
+    box-shadow: 0 0px 12px rgba(46, 4, 130, 0.7) !important;
+    transition: box-shadow 0.3s ease !important;
+
+
     
+}
+.profile{
+    padding-left: 8.2vw !important;
+ 
 }
 
 

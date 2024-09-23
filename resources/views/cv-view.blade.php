@@ -1,6 +1,8 @@
-@extends('layouts.information')
+@extends('layouts.information_show_cv')
 
-@section('content')
+
+
+@section('content1')
 
 
     <!DOCTYPE html>
@@ -12,16 +14,16 @@
         <style>
             body {
                 font-family: 'Inria Serif', serif;
-                line-height: 1.4;
+                line-height: 1.3;
                 color: black !important;
             }
 
             .cv-container {
-                width: 700px;
+                width: 730px;
                 height: 877px;
                 margin: 0 auto;
                 padding: 0;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 1);
                 background-color: #ffffff;
                 display: flex;
                 flex-direction: column;
@@ -70,12 +72,12 @@
             }
 
             .cv-left {
-                width: 40%;
+                width: 47%;
                 padding-left: 50px;
             }
 
             .cv-right {
-                width: 45%;
+                width: 47%;
                 padding-right: 30px;
             }
 
@@ -117,24 +119,54 @@
             .btn-download:hover {
                 background-color: #0056b3;
             }
+            .page-break {
+                page-break-before: always;
+            }
+            .choose-color {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #color, #template {
+                display: flex;
+                align-items: center;
+                gap: 6px; /* Space between the circles */
+                margin-bottom: 0px; /* Space between the rows */
+            }
+
+            #color h2, #template h2 {
+                margin-right: 10px; /* Space between the heading and the circles */
+                margin-bottom: 0;
+                margin-left: 10px;
+            }
+
+            .color-circle {
+                display: inline-block;
+            }
+            
+
         </style>
     </head>
 
     <body>
-        <div class="choose-color">
-        
-            <h1>choose color</h1>
-            <a class="color-circle" href="/show-cv"><div style="height: 30px; width:30px; background-color:#0211b3; border-radius:50% "></div></a>
-            <a class="color-circle" href="/show-cv-purple"><div style="height: 30px; width:30px; background-color:rgb(126, 12, 122); border-radius:50% "></div></a>
-            <a class="color-circle" href="/show-cv-orange"><div style="height: 30px; width:30px; background-color:rgb(184, 120, 2); border-radius:50% "></div></a>
-            <a class="color-circle" href="/show-cv-green"><div style="height: 30px; width:30px; background-color:rgb(10, 99, 1); border-radius:50% "></div></a>
-            <a class="color-circle" href="/show-cv-black"><div style="height: 30px; width:30px; background-color:rgb(83, 82, 84); border-radius:50% "></div></a>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Template</h1>
-            <a class="color-circle" href="/show-cv"><div style="height: 30px; width:30px; background-color:#bec3fa; border-radius:50% "></div></a>
-            <a class="color-circle" href="/cv-view"><div style="height: 30px; width:30px; background-color:#8b8b8e; border-radius:50% "></div></a>
+        <div class="choose-color" style="margin-left:11vw;">
+            
+            <div id="color">
+                <h2>choose color</h2>
+                <a class="color-circle" href="/show-cv"><div style="height: 22px; width:22px; background-color:#0211b3; border-radius:50% "></div></a>
+                <a class="color-circle" href="/show-cv-purple"><div style="height: 22px; width:22px;  background-color:rgb(126, 12, 122); border-radius:50% "></div></a>
+                <a class="color-circle" href="/show-cv-orange"><div style="height: 22px; width:22px;  background-color:rgb(184, 120, 2); border-radius:50% "></div></a>
+                <a class="color-circle" href="/show-cv-green"><div style="height: 22px; width:22px;  background-color:rgb(10, 99, 1); border-radius:50% "></div></a>
+                <a class="color-circle" href="/show-cv-black"><div style="height: 22px; width:22px; background-color:rgb(83, 82, 84); border-radius:50% "></div></a>
+            </div>
+            <div id="template">
+                <h2>Template</h2>
+                <a class="color-circle" href="/show-cv"><div style="height: 22px; width:22px; background-color:#bec3fa; border-radius:50% "></div></a>
+                <a class="color-circle" href="/cv-view"><div style="height: 22px; width:22px; background-color:#8b8b8e; border-radius:50% "></div></a>
+            </div>       
+        </div>
 
-    </div>
-        <div class="cv-container">
+        <div class="cv-container" style="margin-left:12vw;">
             <!-- Name and Image Section -->
             <div class="cv-header">
                 <div id="imageId">
