@@ -1,3 +1,56 @@
+
+# Automated CV generation site
+
+**CV-Site** is basically a automated cv generation site developed using laravel framework. The main features of this project is 
+# Key Features
+### CV Generation
+<img src='./image/home.png' width="500">
+<img src='./image/login.png' width="500">
+<img src='./image/registration.png' width="500">
+<img src='./image/personal-page.png' width="500">
+<img src='./image/strength-page.png' width="500">
+<img src='./image/skill-page.png' width="500">
+<img src='./image/education-page.png' width="500">
+<img src='./image/experience-page.png' width="500">
+<img src='./image/project-page.png' width="500">
+<img src='./image/cv-page-blue.png' width="500">
+<img src='./image/cv-page-purple.png' width="500">
+<img src='./image/cv-pp.png' width="500">
+<img src='./image/profile.png' width="500">
+<img src='./image/dw-cv.png' width="500">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
