@@ -13,7 +13,7 @@
 <img src='./image/education-page.png' width="500">
 <img src='./image/experience-page.png' width="500">
 <img src='./image/project-page.png' width="500">
-<img src='./image/cv-page-blue.png' width="500">
+<img src='cv-site/public/image/cv-page-blue.png' width="500">
 <img src='./image/cv-page-purple.png' width="500">
 <img src='./image/cv-pp.png' width="500">
 <img src='./image/profile.png' width="500">
