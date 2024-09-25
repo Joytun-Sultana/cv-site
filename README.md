@@ -18,10 +18,7 @@
 <img src='./image/cv-pp.png' width="500">
 <img src='./image/profile.png' width="500">
 <img src='./image/dw-cv.png' width="500">
-
-
-
-
+![Sample Image](assets/image/home.png)
 
 
 
