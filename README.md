@@ -4,7 +4,7 @@
 **CV-Site** is basically a automated cv generation site developed using laravel framework. The main features of this project is 
 # Key Features
 ### CV Generation
-<img src='./image/home.png' width="500">
+<img src='.public/image/home.png' width="500">
 <img src='./image/login.png' width="500">
 <img src='./image/registration.png' width="500">
 <img src='./image/personal-page.png' width="500">
